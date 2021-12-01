@@ -13,3 +13,5 @@ print(sorted(users, key=lambda u: u.user_id))
 
 from operator import attrgetter
 print(sorted(users, key=attrgetter('user_id')))
+
+
