@@ -32,8 +32,19 @@ class Vector2d:
         return bool(abs(self))
 
     def __format__(self, fmt_spec=''):
-        components = (format(c, fmt_spec) for c in self)
+        if fmt_spec.endswith('p'):
+            fmt_spec = fmt_spec[:-1]
+            coords = (abs(self), self.angle())
+            outer_fmt = '<{}, {}>'
+        else:
+            coords = self
+            outer_fmt = '({}, {})'
+        components = (format(c, fmt_spec) for c in coords)
         return '({}, {})'.format(*components)
+
+    def angle(self):
+        return math.atan2(self.y, self.x)
+
 
     @classmethod
     def frombytes(cls, octets):
@@ -44,4 +55,5 @@ class Vector2d:
 
 v1 = Vector2d(3, 4)
 print(v1)
+print(format(v1, '.3f'))
 print(format(v1, '.3f'))
