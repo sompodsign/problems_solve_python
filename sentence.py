@@ -24,3 +24,4 @@ s = Sentence('"The time has come," Walrus said')
 print(s)
 for word in s:
     print(word)
+
