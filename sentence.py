@@ -3,6 +3,7 @@ import reprlib
 
 RE_WORD = re.compile('\w+')
 
+
 class Sentence:
 
     def __init__(self, text):
@@ -19,4 +20,7 @@ class Sentence:
         return 'Sentence(%s)' % reprlib.repr(self.text)
 
 
-
+s = Sentence('"The time has come," Walrus said')
+print(s)
+for word in s:
+    print(word)
