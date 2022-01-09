@@ -1,5 +1,5 @@
 def producer(sentence, next_coroutine):
-    '''Producer which just split strings and feed it to pattern filter courine'''
+    """Producer which just split strings and feed it to pattern filter coroutine"""
     tokens = sentence.split()
     for token in tokens:
         next_coroutine.send(token)
