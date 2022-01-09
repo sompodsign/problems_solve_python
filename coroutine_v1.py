@@ -9,3 +9,4 @@ def print_name(prefix):
 corou = print_name('Dear')
 corou.__next__()
 corou.send('Dear Shampad')
+corou.close()
