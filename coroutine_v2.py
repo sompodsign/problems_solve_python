@@ -40,5 +40,5 @@ next(pt)
 pf = pattern_filter(next_coroutine=pt)
 next(pf)
 
-sentence = "Bobn is running behind a fast moving car"
+sentence = "Bob is running behind a fast moving car"
 producer(sentence, pf)
