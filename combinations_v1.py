@@ -1,12 +1,11 @@
 from itertools import combinations
 
-s, k = "HACK", 2
+s, k = "HACK", 4
 s = sorted(list(s))
 
-for i in sorted(combinations(s, 1)):
-    print(''.join(i))
-for i in combinations(s, k):
-    print("".join(i))
+for i in range(1, k+1):
+    for j in combinations(s, i):
+        print("".join(j))
 
 '''
 A
